@@ -2,6 +2,7 @@ package org.judy.silentkiosk.store.entity;
 
 
 import lombok.*;
+import org.judy.silentkiosk.common.entity.BaseEntity;
 
 import javax.persistence.*;
 
@@ -9,7 +10,7 @@ import javax.persistence.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString()
+@ToString
 @Getter
 @Table(name = "tbl_store")
 public class Store extends BaseEntity {

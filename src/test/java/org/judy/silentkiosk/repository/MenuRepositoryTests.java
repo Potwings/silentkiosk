@@ -23,7 +23,7 @@ public class MenuRepositoryTests {
 
         Long mno = 27L;
 
-        log.info(menuRepository.getMenu(mno));
+        log.info(menuRepository.getStoreMenu(mno));
 
     }
 }

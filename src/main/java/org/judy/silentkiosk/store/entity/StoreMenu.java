@@ -1,24 +1,25 @@
 package org.judy.silentkiosk.store.entity;
 
 import lombok.*;
-import org.hibernate.engine.profile.Fetch;
 
 import javax.persistence.*;
 
 @Entity
 @Getter
-@ToString(exclude = "store")
+@ToString(exclude = "sno")
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "tbl_store_menu")
-public class Menu {
+public class StoreMenu {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long mno;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "sno")
-    private Store store;
+    private Store sno;
 
     private String menuName;
 

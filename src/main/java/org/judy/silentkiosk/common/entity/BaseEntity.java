@@ -1,4 +1,4 @@
-package org.judy.silentkiosk.store.entity;
+package org.judy.silentkiosk.common.entity;
 
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;
@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @MappedSuperclass
 @EntityListeners(value = {AuditingEntityListener.class})
 @Getter
-abstract class BaseEntity {
+public abstract class BaseEntity {
 
     @CreatedDate
     @Column(name = "regdate", updatable = false)
